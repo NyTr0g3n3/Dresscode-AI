@@ -1,0 +1,7 @@
+{
+  "name": "Dresscode AI",
+  "description": "A smart virtual wardrobe that uses AI to analyze your clothes and suggest personalized, weather-appropriate outfits. Upload your garments and let Gemini craft the perfect look for any occasion.",
+  "requestFramePermissions": [
+    "camera"
+  ]
+}
