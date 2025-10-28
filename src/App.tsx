@@ -1,13 +1,13 @@
 import React, { useState, useEffect, useCallback } from 'react';
-import type { ClothingItem, Outfit, Weather, Theme, Occasion, WardrobeAnalysis, FirebaseUser } from './types.ts';
-import { generateOutfits, generateOutfitImage, analyzeWardrobeGaps } from './geminiService.ts';
-import * as firestoreService from './firestoreService.ts';
-import Header from './Header.tsx';
-import ImageUploader from './ImageUploader.tsx';
-import Wardrobe from './Wardrobe.tsx';
-import OutfitGenerator from './OutfitGenerator.tsx';
-import OutfitDisplay from './OutfitDisplay.tsx';
-import SavedOutfits from './SavedOutfits.tsx';
+import type { ClothingItem, Outfit, Weather, Theme, Occasion, WardrobeAnalysis, FirebaseUser } from './types';
+import { generateOutfits, generateOutfitImage, analyzeWardrobeGaps } from './services/geminiService';
+import * as firestoreService from './services/firestoreService';
+import Header from './components/Header';
+import ImageUploader from './components/ImageUploader';
+import Wardrobe from './components/Wardrobe';
+import OutfitGenerator from './components/OutfitGenerator';
+import OutfitDisplay from './components/OutfitDisplay';
+import SavedOutfits from './components/SavedOutfits';
 
 interface AppProps {
   user: FirebaseUser;

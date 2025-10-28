@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import ReactDOM from 'react-dom/client';
-import App from './App.tsx';
-import AuthPage from './AuthPage.tsx';
-import { auth, isFirebaseConfigValid } from './firebase.ts';
-import type { FirebaseUser } from './types.ts';
+import App from './App';
+import AuthPage from './components/AuthPage';
+import { auth, isFirebaseConfigValid } from './services/firebase';
+import type { FirebaseUser } from './types';
 import { onAuthStateChanged, signOut } from 'firebase/auth';
 
 const FirebaseConfigError: React.FC = () => (
@@ -19,7 +19,7 @@ const FirebaseConfigError: React.FC = () => (
       <div className="mt-6 text-left bg-gray-50 dark:bg-gray-800 p-4 rounded-md">
         <p className="font-semibold text-gray-800 dark:text-gray-200">Action requise :</p>
         <p className="mt-2 text-gray-600 dark:text-gray-400">
-          Veuillez ouvrir le fichier <code className="bg-gray-200 dark:bg-gray-700 text-red-600 dark:text-amber-400 font-mono p-1 rounded">firebase.ts</code> et remplacer les valeurs de l'objet <code>firebaseConfig</code> par celles de votre propre projet Firebase.
+          Veuillez ouvrir le fichier <code className="bg-gray-200 dark:bg-gray-700 text-red-600 dark:text-amber-400 font-mono p-1 rounded">src/services/firebase.ts</code> et remplacer les valeurs de l'objet <code>firebaseConfig</code> par celles de votre propre projet Firebase.
         </p>
         <p className="mt-4 text-xs text-gray-500">
           Vous pouvez trouver ces informations dans les paramètres de votre projet sur la <a href="https://console.firebase.google.com/" target="_blank" rel="noopener noreferrer" className="text-amber-600 hover:underline">console Firebase</a>.
